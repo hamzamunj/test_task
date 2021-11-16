@@ -1,0 +1,13 @@
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <a href="<%= post_path(post) %>">
+        <%= post.body %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Post", new_post_path %>
+
+<%= button_to "logout", destroy_user_session_path, method: :delete  %>
